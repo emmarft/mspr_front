@@ -81,7 +81,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     try {
       console.log("Payload envoyé :", user);
 
-      const response = await fetch('http://localhost:3333/payetonkawa/api/v1/auth/login', {
+      const response = await fetch('http://localhost:8081/payetonkawa/api/v1/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -119,7 +119,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const register = async (userData: RegisterData) => {
     try {
       // Simulation d'appel API - remplacez par votre vraie API
-      const response = await fetch('http://localhost:3333/payetonkawa/api/v1/auth/register', {
+      const response = await fetch('http://localhost:8081/payetonkawa/api/v1/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
