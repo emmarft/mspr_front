@@ -8,7 +8,7 @@ import { Boutique } from './pages/Boutique';
 import { Produits } from './pages/Produits';
 import { MesCommandes } from './pages/MesCommandes';
 import { Profil } from './pages/Profil';
-import { ProtectedRoute } from './components/protectedRoute';
+import { ProtectedRoute } from './components/ProtectedRoute';
 import { Dashboard } from './pages/Dashboard';
 import { Navigate } from 'react-router-dom';
 import { useAuth } from './contexts/AuthContext';
