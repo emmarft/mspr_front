@@ -10,6 +10,11 @@ export default defineConfig({
       '/api-produits': 'http://localhost:3001',
       '/api-clients': 'http://localhost:3333',
       '/api-commandes': 'http://localhost:3003',
+      '/api-auth': {
+        target: 'http://localhost:8081',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api-auth/, '/payetonkawa/api/v1/auth')
+      }
     }
   }
 })
