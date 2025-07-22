@@ -6,7 +6,6 @@ import { Badge } from '../components/UI/Badge';
 import { LoadingSpinner } from '../components/UI/LoadingSpinner';
 import { Search, Filter, ShoppingCart, Coffee, Star } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
-import { Navigate } from 'react-router-dom';
 
 type Produit = {
   id: string;
@@ -28,10 +27,6 @@ export const Boutique: React.FC = () => {
   const [filterOrigine, setFilterOrigine] = useState<string>('tous');
   const [panier, setPanier] = useState<{ [key: string]: number }>({});
 
-  if (user) {
-    return <Navigate to="/dashboard" />;
-  }
-  
   const { data: produits, error, isLoading } = useQuery<Produit[], Error>({
     queryKey: ['produits'],
     queryFn: async () => {

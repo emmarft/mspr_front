@@ -42,7 +42,7 @@ export const LoginModal: React.FC = () => {
       console.log("Données envoyées à login:", loginData);
       const success = await login(loginData.email, loginData.password);
       closeLoginModal();
-      navigate('/dashboard');
+      // La redirection se fera automatiquement via le composant HomePage
 
     } catch (err) {
       setError('Erreur de connexion');
